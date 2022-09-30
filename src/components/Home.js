@@ -37,12 +37,11 @@ function Home() {
       <SelectModel ac={ac} setAc={setAc} />
       <Table striped size="sm">
         <thead>
-          <th>Brand</th>
-          <th>Year</th>
-          <th>Model</th>
-          <th>Plate</th>
-          <th>Notes</th>
-          <th>Action</th>
+          {
+            ["Brand", "Year", "Model", "Plate", "Notes", "Aciton"].map((item, index) => (
+              <th key={index}>{item}</th>
+            ))
+          }
         </thead>
         <tbody>
           {vehicles.map((vehicle) => (
